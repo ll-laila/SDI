@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20250321115131"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "level",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creaDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CustomisationLevel",
+  "relationships": [
+    {
+      "otherEntityName": "moduleDeployement",
+      "otherEntityRelationshipName": "custoLevel",
+      "relationshipName": "moduleDeployement",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "featureDeployement",
+      "otherEntityRelationshipName": "custoLevel",
+      "relationshipName": "featureDeployement",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

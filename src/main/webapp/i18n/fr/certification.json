@@ -1,0 +1,30 @@
+{
+  "sdiApp": {
+    "certification": {
+      "home": {
+        "title": "Certifications",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Certification",
+        "createOrEditLabel": "Créer ou éditer un Certification",
+        "notFound": "Aucun Certification trouvé"
+      },
+      "created": "Un nouveau Certification a été créé avec l'identifiant { param }",
+      "updated": "Le Certification avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le Certification avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Certification { id } ?"
+      },
+      "detail": {
+        "title": "Certification"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "expireDate": "Expire Date",
+      "notes": "Notes",
+      "clientCertification": "Client Certification"
+    }
+  }
+}

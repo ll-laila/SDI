@@ -1,0 +1,46 @@
+{
+  "annotations": {
+    "changelogDate": "20250321115139"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customisationDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creaDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "name": "FeatureDeployement",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "feature",
+      "relationshipName": "feature",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "level",
+      "otherEntityName": "customisationLevel",
+      "relationshipName": "custoLevel",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,32 @@
+{
+  "sdiApp": {
+    "feature": {
+      "home": {
+        "title": "Features",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Feature",
+        "createOrEditLabel": "Créer ou éditer un Feature",
+        "notFound": "Aucun Feature trouvé"
+      },
+      "created": "Un nouveau Feature a été créé avec l'identifiant { param }",
+      "updated": "Le Feature avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le Feature avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Feature { id } ?"
+      },
+      "detail": {
+        "title": "Feature"
+      },
+      "id": "ID",
+      "name": "Name",
+      "code": "Code",
+      "apiVersion": "Api Version",
+      "description": "Description",
+      "notes": "Notes",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "featureDeployement": "Feature Deployement",
+      "module": "Module"
+    }
+  }
+}

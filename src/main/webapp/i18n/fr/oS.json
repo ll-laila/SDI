@@ -1,0 +1,28 @@
+{
+  "sdiApp": {
+    "oS": {
+      "home": {
+        "title": "OS",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau OS",
+        "createOrEditLabel": "Créer ou éditer un OS",
+        "notFound": "Aucun OS trouvé"
+      },
+      "created": "Un nouveau OS a été créé avec l'identifiant { param }",
+      "updated": "Le OS avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le OS avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le OS { id } ?"
+      },
+      "detail": {
+        "title": "OS"
+      },
+      "id": "ID",
+      "name": "Name",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "notes": "Notes",
+      "productDeployement": "Product Deployement"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "sdiApp": {
+    "hSM": {
+      "home": {
+        "title": "HSMS",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new HSM",
+        "createOrEditLabel": "Create or edit a HSM",
+        "notFound": "No HSMS found"
+      },
+      "created": "A new HSM is created with identifier { param }",
+      "updated": "A HSM is updated with identifier { param }",
+      "deleted": "A HSM is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete HSM { id }?"
+      },
+      "detail": {
+        "title": "HSM"
+      },
+      "id": "ID",
+      "name": "Name",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "notes": "Notes",
+      "productDeployement": "Product Deployement"
+    }
+  }
+}

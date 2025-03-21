@@ -1,0 +1,28 @@
+{
+  "sdiApp": {
+    "dB": {
+      "home": {
+        "title": "DBS",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau DB",
+        "createOrEditLabel": "Créer ou éditer un DB",
+        "notFound": "Aucun DB trouvé"
+      },
+      "created": "Un nouveau DB a été créé avec l'identifiant { param }",
+      "updated": "Le DB avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le DB avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le DB { id } ?"
+      },
+      "detail": {
+        "title": "DB"
+      },
+      "id": "ID",
+      "name": "Name",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "notes": "Notes",
+      "productDeployement": "Product Deployement"
+    }
+  }
+}

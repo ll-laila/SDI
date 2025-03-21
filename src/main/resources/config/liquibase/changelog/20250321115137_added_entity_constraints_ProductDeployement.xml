@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity ProductDeployement.
+    -->
+    <changeSet id="20250321115137-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="client_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__client_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="client"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="product_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__product_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="deployement_type_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__deployement_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="deployement_type"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="ha_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__ha_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ha"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="hsm_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__hsm_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hsm"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="db_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__db_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="db"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="host_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__host_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="host"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="application_server_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__application_server_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="application_server"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="os_id"
+                                 baseTableName="product_deployement"
+                                 constraintName="fk_product_deployement__os_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="os"
+                                 />
+    </changeSet>
+</databaseChangeLog>

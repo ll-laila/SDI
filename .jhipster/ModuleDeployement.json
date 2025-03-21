@@ -1,0 +1,49 @@
+{
+  "annotations": {
+    "changelogDate": "20250321115138"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "customisationDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creaDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ModuleDeployement",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "module",
+      "relationshipName": "module",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "refContract",
+      "otherEntityName": "productDeployement",
+      "relationshipName": "productDeployement",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "level",
+      "otherEntityName": "customisationLevel",
+      "relationshipName": "custoLevel",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,30 @@
+{
+  "sdiApp": {
+    "moduleDeployement": {
+      "home": {
+        "title": "Module Deployements",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Module Deployement",
+        "createOrEditLabel": "Create or edit a Module Deployement",
+        "notFound": "No Module Deployements found"
+      },
+      "created": "A new Module Deployement is created with identifier { param }",
+      "updated": "A Module Deployement is updated with identifier { param }",
+      "deleted": "A Module Deployement is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Module Deployement { id }?"
+      },
+      "detail": {
+        "title": "Module Deployement"
+      },
+      "id": "ID",
+      "customisationDescription": "Customisation Description",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "notes": "Notes",
+      "module": "Module",
+      "productDeployement": "Product Deployement",
+      "custoLevel": "Custo Level"
+    }
+  }
+}

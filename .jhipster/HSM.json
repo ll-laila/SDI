@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20250321115153"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "creaDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "name": "HSM",
+  "relationships": [
+    {
+      "otherEntityName": "productDeployement",
+      "otherEntityRelationshipName": "hsm",
+      "relationshipName": "productDeployement",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

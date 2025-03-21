@@ -1,0 +1,281 @@
+// -----------------------------------
+// v14- 31/01/2024  mlouah   17h17
+
+// ---------------------------------------
+
+entity DeployementType{
+ 	type String
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+ }
+
+ entity CustomisationLevel{
+ 	level String
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+ }
+
+ entity Product
+{
+	// integrant la version dans le nom
+    name String required
+    code String
+    logo String
+    notes String
+    creaDate LocalDate
+    updateDate LocalDate
+ }
+
+entity ProductLine{
+	name String required
+    notes String
+    creaDate LocalDate
+    updateDate LocalDate
+}
+
+ entity Module {
+	name String required
+    code String required
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+entity Domaine {
+ 	name String required
+    code String
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+entity Feature
+{
+	name String required
+    code String
+    apiVersion String
+   	description String
+    notes String
+    creaDate LocalDate
+    updateDate LocalDate
+}
+
+entity ProductDeployement {
+     code String
+     refContract String
+     startDeployementDate LocalDate
+     endDeployementDate LocalDate
+	 creaDate LocalDate
+     updateDate LocalDate
+     notes String
+}
+
+entity ModuleDeployement {
+	customisationDescription String
+    creaDate LocalDate
+    updateDate LocalDate
+	customisationDescription String
+    notes String
+  }
+
+
+entity FeatureDeployement {
+	code String
+	customisationDescription String
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+  }
+
+
+entity Region{
+	name String required
+    code String
+	creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+entity ClientCertification{
+	certification String
+    certificationDate LocalDate
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+entity ClientSize{
+	sizeName String required
+	sizeCode String  required
+    sizeDescription String
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+
+entity Client
+{
+    id Long
+	  ClientLogo String
+    name String required
+    code String required
+    mainContactName String
+    mainContactEmail String pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    currentCardHolderNumber Integer
+    currentBruncheNumber Integer
+    currentCustomersNumber Integer
+    mainContactPhoneNumber  String
+    url String
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+entity ClientType {
+ 	 type String required
+     description String
+     creaDate LocalDate
+     updateDate LocalDate
+     notes String
+ }
+
+ entity Certification{
+ 	 name String required
+     description String
+     creaDate LocalDate
+     updateDate LocalDate
+	 expireDate LocalDate
+     notes String
+ }
+ entity ClientEvent{
+ 	 event String required
+     description String
+     creaDate LocalDate
+     updateDate LocalDate
+     notes String
+ }
+
+
+
+  entity ClientEventType{
+ 	 type String required
+     description String
+     creaDate LocalDate
+     updateDate LocalDate
+     notes String
+ }
+
+
+entity Country
+{
+	countryname String required
+    countrycode String required
+    countryFlagcode String
+    countryFlag String
+    notes String
+    creaDate LocalDate
+    updateDate LocalDate
+}
+
+// haute dispo
+entity HA
+{
+	name String required
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+entity DB
+{
+	name String required
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+
+entity HOST
+{
+	name String required
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+entity OS
+{
+	name String required
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+entity HSM
+{
+	name String required
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+entity ApplicationServer
+{
+	name String required
+    creaDate LocalDate
+    updateDate LocalDate
+    notes String
+}
+
+
+relationship ManyToOne {
+  	//ClientVolumeAtDate{client(code)} to Client{datevolume(statementDate)}
+    ClientCertification {client(code)} to Client{Certif(certification)}
+    ClientEvent{client(code)} to Client
+ }
+
+relationship OneToMany{
+
+	Country to Client{country(countryname)}
+    Region to Country{region(name)}
+    ProductLine to Product{productline(name)}
+
+    Product to Module{product(name)}
+    Domaine to Module{domaine(name)}
+    Module to Feature{module(name)}
+
+	Certification to ClientCertification{certif(name)}
+
+	// client
+    Client to ProductDeployement{client(code)}
+    ClientSize to Client{size(sizeCode)}
+    ClientType to Client{ClientType(type)}
+  	ClientEventType to ClientEvent{ClientEventType(type)}
+
+
+    Product to ProductDeployement{product(name)}
+    Module  to ModuleDeployement{module(name)}
+    Feature to FeatureDeployement{feature(name)}
+
+    //ProductDeployement
+    ProductDeployement to ModuleDeployement{productDeployement(refContract)}
+    DeployementType to ProductDeployement{DeployementType(type)}
+    HA to ProductDeployement{ha(name)}
+    HSM to ProductDeployement{hsm(name)}
+    DB to ProductDeployement{db(name)}
+    HOST to ProductDeployement{host(name)}
+    ApplicationServer to ProductDeployement{ApplicationServer(name)}
+    OS to ProductDeployement{os(name)}
+
+
+   //moduleDeployement
+    //ModuleDeployement to FeatureDeployement{moduleDeployement(id)}
+    CustomisationLevel to ModuleDeployement{custoLevel(level)}
+
+    // FeatureDeployement
+    CustomisationLevel to FeatureDeployement{custoLevel(level)}
+
+}
+
+filter Client

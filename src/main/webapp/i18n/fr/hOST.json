@@ -1,0 +1,28 @@
+{
+  "sdiApp": {
+    "hOST": {
+      "home": {
+        "title": "HOSTS",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau HOST",
+        "createOrEditLabel": "Créer ou éditer un HOST",
+        "notFound": "Aucun HOST trouvé"
+      },
+      "created": "Un nouveau HOST a été créé avec l'identifiant { param }",
+      "updated": "Le HOST avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le HOST avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le HOST { id } ?"
+      },
+      "detail": {
+        "title": "HOST"
+      },
+      "id": "ID",
+      "name": "Name",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "notes": "Notes",
+      "productDeployement": "Product Deployement"
+    }
+  }
+}

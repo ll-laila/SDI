@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20250321115146"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "event",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creaDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ClientEvent",
+  "relationships": [
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "client",
+      "relationshipName": "client",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "type",
+      "otherEntityName": "clientEventType",
+      "relationshipName": "clientEventType",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,28 @@
+{
+  "sdiApp": {
+    "oS": {
+      "home": {
+        "title": "OS",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new OS",
+        "createOrEditLabel": "Create or edit a OS",
+        "notFound": "No OS found"
+      },
+      "created": "A new OS is created with identifier { param }",
+      "updated": "A OS is updated with identifier { param }",
+      "deleted": "A OS is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete OS { id }?"
+      },
+      "detail": {
+        "title": "OS"
+      },
+      "id": "ID",
+      "name": "Name",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "notes": "Notes",
+      "productDeployement": "Product Deployement"
+    }
+  }
+}

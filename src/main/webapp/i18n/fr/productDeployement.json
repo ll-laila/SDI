@@ -1,0 +1,40 @@
+{
+  "sdiApp": {
+    "productDeployement": {
+      "home": {
+        "title": "ProductDeployements",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Product Deployement",
+        "createOrEditLabel": "Créer ou éditer un Product Deployement",
+        "notFound": "Aucun Product Deployement trouvé"
+      },
+      "created": "Un nouveau Product Deployement a été créé avec l'identifiant { param }",
+      "updated": "Le Product Deployement avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le Product Deployement avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Product Deployement { id } ?"
+      },
+      "detail": {
+        "title": "Product Deployement"
+      },
+      "id": "ID",
+      "code": "Code",
+      "refContract": "Ref Contract",
+      "startDeployementDate": "Start Deployement Date",
+      "endDeployementDate": "End Deployement Date",
+      "creaDate": "Crea Date",
+      "updateDate": "Update Date",
+      "notes": "Notes",
+      "moduleDeployement": "Module Deployement",
+      "client": "Client",
+      "product": "Product",
+      "deployementType": "Deployement Type",
+      "ha": "Ha",
+      "hsm": "Hsm",
+      "db": "Db",
+      "host": "Host",
+      "applicationServer": "Application Server",
+      "os": "Os"
+    }
+  }
+}
