@@ -19,6 +19,7 @@
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email",
+    "password": "Default password",
     "activated": "Activated",
     "deactivated": "Deactivated",
     "profiles": "Profiles",
@@ -27,5 +28,6 @@
     "createdDate": "Created date",
     "lastModifiedBy": "Modified by",
     "lastModifiedDate": "Modified date"
+
   }
 }

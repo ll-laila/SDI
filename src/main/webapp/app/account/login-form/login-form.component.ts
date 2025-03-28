@@ -25,6 +25,8 @@ export default defineComponent({
       try {
         const result = await axios.post('api/authenticate', data);
         const bearerToken = result.headers.authorization;
+        console.log('result : ', result);
+        console.log('bearerToken : ', bearerToken);
         if (bearerToken && bearerToken.slice(0, 7) === 'Bearer ') {
           const jwt = bearerToken.slice(7, bearerToken.length);
           if (rememberMe.value) {
@@ -42,6 +44,27 @@ export default defineComponent({
         if (route.path === '/forbidden') {
           previousState();
         }
+
+
+
+        // authenticationError.value = false;
+        // loginService.hideLogin();
+        // await accountService.retrieveAccount();
+        //
+        // // 🔥 Récupération du rôle utilisateur
+        // const userRoles = accountService.userAuthorities; // Liste des rôles de l'utilisateur
+        //
+        // if (route.path === '/forbidden') {
+        //   previousState();
+        // } else if (userRoles.includes('ROLE_ADMIN')) {
+        //   router.push('/home/admin');  // 🔥 Redirige les admins
+        // } else if (userRoles.includes('ROLE_COMMERCIAL')) {
+        //   router.push('/home/commercial');  // 🔥 Redirige les commerciaux
+        // } else if (userRoles.includes('ROLE_DM')) {
+        //   router.push('/home/dm');  // 🔥 Redirige les DM
+        // } else {
+        //   router.push('/'); // 🔥 Par défaut, redirection vers la page d'accueil
+        // }
       } catch (_error) {
         authenticationError.value = true;
       }

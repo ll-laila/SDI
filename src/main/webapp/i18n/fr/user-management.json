@@ -19,6 +19,7 @@
     "firstName": "Prénom",
     "lastName": "Nom",
     "email": "Email",
+    "password": "Mot de passe par défaut",
     "activated": "Activé",
     "deactivated": "Désactivé",
     "profiles": "Droits",

@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Bienvenue, Java Hipster !",
-    "subtitle": "Ceci est votre page d'accueil",
+    "title": "Recensement et Cartographie des Produits S2M Déployés",
+    "subtitle": "Visualisation en temps réel et gestion optimisée des déploiements de produits S2M.",
     "logged": {
       "message": "Vous êtes connecté en tant que \"{ username }\"."
     },
@@ -14,6 +14,9 @@
       "follow": "Suivez {'@'}jhipster sur Twitter"
     },
     "like": "Si vous aimez JHipster, donnez nous une étoile sur",
-    "github": "GitHub "
+    "github": "GitHub ",
+    "adminHomeTitle": "Espace Administrateur",
+    "dmHomeTitle": "Espace Responsable de Livraison",
+    "commercialHomeTitle": "Espace Commercial"
   }
 }
