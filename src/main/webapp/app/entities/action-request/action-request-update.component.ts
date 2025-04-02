@@ -106,14 +106,25 @@ export default defineComponent({
           this.productDeployement = Object.assign(new ProductDeployement(), productDeployementData);
 
           // Sauvegarder l'entité ProductDeployement
-          this.productDeployementService()
-            .create(this.productDeployement)
-            .then(response => {
-              this.alertService.showSuccess(this.t$('sdiApp.productDeployement.created', { param: response.id }).toString());
-            })
-            .catch(error => {
-              this.alertService.showHttpError(error.response);
-            });
+          if (this.productDeployement.id) {
+            this.productDeployementService()
+              .update(this.productDeployement)
+              .then(param => {
+                this.alertService.showInfo(this.t$('sdiApp.productDeployement.updated', { param: param.id }));
+              })
+              .catch(error => {
+                this.alertService.showHttpError(error.response);
+              });
+          } else {
+            this.productDeployementService()
+              .create(this.productDeployement)
+              .then(response => {
+                this.alertService.showSuccess(this.t$('sdiApp.productDeployement.created', { param: response.id }).toString());
+              })
+              .catch(error => {
+                this.alertService.showHttpError(error.response);
+              });
+          }
         } catch (error) {
           console.error('Erreur lors de la conversion de newData en ProductDeployement', error);
         }

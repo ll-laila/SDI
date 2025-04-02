@@ -199,22 +199,8 @@ export default defineComponent({
     save(): void {
       this.isSaving = true;
       if (this.productDeployement.id) {
-        this.productDeployementService()
-          .update(this.productDeployement)
-          .then(param => {
-            this.isSaving = false;
-            this.previousState();
-            this.alertService.showInfo(this.t$('sdiApp.productDeployement.updated', { param: param.id }));
-          })
-          .catch(error => {
-            this.isSaving = false;
-            this.alertService.showHttpError(error.response);
-          });
-      } else {
         const newDataJson = JSON.stringify(this.productDeployement);
-
         this.actionRequest = new ActionRequest(undefined, 'ProductDeployement', newDataJson, 'PENDING', 'manager', null, new Date(), null);
-
         this.actionRequestService()
           .create(this.actionRequest)
           .then(param => {
@@ -226,18 +212,22 @@ export default defineComponent({
             this.isSaving = false;
             this.alertService.showHttpError(error.response);
           });
+      }
 
-        // this.productDeployementService()
-        //   .create(this.productDeployement)
-        //   .then(param => {
-        //     this.isSaving = false;
-        //     this.previousState();
-        //     this.alertService.showSuccess(this.t$('sdiApp.productDeployement.created', { param: param.id }).toString());
-        //   })
-        //   .catch(error => {
-        //     this.isSaving = false;
-        //     this.alertService.showHttpError(error.response);
-        //   });
+      else {
+        const newDataJson = JSON.stringify(this.productDeployement);
+        this.actionRequest = new ActionRequest(undefined, 'ProductDeployement', newDataJson, 'PENDING', 'manager', null, new Date(), null);
+        this.actionRequestService()
+          .create(this.actionRequest)
+          .then(param => {
+            this.isSaving = false;
+            this.previousState();
+            this.alertService.showSuccess(this.t$('sdiApp.actionRequest.created', { param: param.id }).toString());
+          })
+          .catch(error => {
+            this.isSaving = false;
+            this.alertService.showHttpError(error.response);
+          });
       }
     },
   },

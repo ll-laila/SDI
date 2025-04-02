@@ -29,7 +29,8 @@
       "Copy": "Copier",
       "close" : "Fermer",
       "data" : "Données",
-      "Unrealized": "Non approuvé"
+      "Unrealized": "Non approuvé",
+      "notes": "Notes"
     }
   }
 }

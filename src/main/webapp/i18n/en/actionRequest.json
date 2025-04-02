@@ -29,7 +29,8 @@
       "Copy" : "Copy",
       "close" : "Close",
       "data" : "Data",
-      "Unrealized": "Unrealized"
+      "Unrealized": "Unrealized",
+      "notes": "Notes"
     }
   }
 }
