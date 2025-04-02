@@ -115,11 +115,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a Domaine', async () => {
-        const patchObject = {
-          creaDate: dayjs(currentDate).format(DATE_FORMAT),
-          updateDate: dayjs(currentDate).format(DATE_FORMAT),
-          ...new Domaine(),
-        };
+        const patchObject = { name: 'BBBBBB', code: 'BBBBBB', creaDate: dayjs(currentDate).format(DATE_FORMAT), ...new Domaine() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

@@ -117,10 +117,10 @@ describe('Service Tests', () => {
 
       it('should partial update a ClientSize', async () => {
         const patchObject = {
+          sizeName: 'BBBBBB',
           sizeCode: 'BBBBBB',
           sizeDescription: 'BBBBBB',
-          creaDate: dayjs(currentDate).format(DATE_FORMAT),
-          notes: 'BBBBBB',
+          updateDate: dayjs(currentDate).format(DATE_FORMAT),
           ...new ClientSize(),
         };
         const returnedFromService = Object.assign(patchObject, elemDefault);

@@ -285,7 +285,7 @@ class OSResourceIT {
         OS partialUpdatedOS = new OS();
         partialUpdatedOS.setId(oS.getId());
 
-        partialUpdatedOS.updateDate(UPDATED_UPDATE_DATE).notes(UPDATED_NOTES);
+        partialUpdatedOS.creaDate(UPDATED_CREA_DATE).updateDate(UPDATED_UPDATE_DATE).notes(UPDATED_NOTES);
 
         restOSMockMvc
             .perform(

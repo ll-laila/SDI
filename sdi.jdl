@@ -228,6 +228,30 @@ entity ApplicationServer
     notes String
 }
 
+enum ActionRequestStatus {
+  PENDING,
+  APPROVED,
+  REJECTED
+}
+
+entity ActionRequest {
+
+  entityType String required // Nom de l'entité cible (ex: ProductDeployement, ModuleDeployement, FeatureDeployement)
+
+  newData TextBlob required,
+
+  status ActionRequestStatus required,
+
+  createdBy String required
+
+  approvedBy String
+
+  createdAt Instant
+
+  updatedAt Instant
+
+}
+
 
 relationship ManyToOne {
   	//ClientVolumeAtDate{client(code)} to Client{datevolume(statementDate)}

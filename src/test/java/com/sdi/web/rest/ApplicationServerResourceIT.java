@@ -291,7 +291,7 @@ class ApplicationServerResourceIT {
         ApplicationServer partialUpdatedApplicationServer = new ApplicationServer();
         partialUpdatedApplicationServer.setId(applicationServer.getId());
 
-        partialUpdatedApplicationServer.name(UPDATED_NAME).creaDate(UPDATED_CREA_DATE).notes(UPDATED_NOTES);
+        partialUpdatedApplicationServer.creaDate(UPDATED_CREA_DATE).updateDate(UPDATED_UPDATE_DATE);
 
         restApplicationServerMockMvc
             .perform(

@@ -285,7 +285,7 @@ class HSMResourceIT {
         HSM partialUpdatedHSM = new HSM();
         partialUpdatedHSM.setId(hSM.getId());
 
-        partialUpdatedHSM.name(UPDATED_NAME);
+        partialUpdatedHSM.name(UPDATED_NAME).updateDate(UPDATED_UPDATE_DATE);
 
         restHSMMockMvc
             .perform(

@@ -114,7 +114,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a HA', async () => {
-        const patchObject = { ...new HA() };
+        const patchObject = { name: 'BBBBBB', updateDate: dayjs(currentDate).format(DATE_FORMAT), ...new HA() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

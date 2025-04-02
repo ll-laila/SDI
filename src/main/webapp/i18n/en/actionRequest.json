@@ -1,0 +1,35 @@
+{
+  "sdiApp": {
+    "actionRequest": {
+      "home": {
+        "title": "Action Requests",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Action Request",
+        "createOrEditLabel": "Create or edit a Action Request",
+        "notFound": "No Action Requests found"
+      },
+      "created": "A new Action Request is created with identifier { param }",
+      "updated": "A Action Request is updated with identifier { param }",
+      "deleted": "A Action Request is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Action Request { id }?"
+      },
+      "detail": {
+        "title": "Action Request"
+      },
+      "id": "ID",
+      "entityType": "Entity Type",
+      "newData": "New Data",
+      "status": "Status",
+      "createdBy": "Created By",
+      "approvedBy": "Approved By",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "Copied" : "Copied!",
+      "Copy" : "Copy",
+      "close" : "Close",
+      "data" : "Data",
+      "Unrealized": "Unrealized"
+    }
+  }
+}

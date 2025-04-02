@@ -291,7 +291,7 @@ class ProductLineResourceIT {
         ProductLine partialUpdatedProductLine = new ProductLine();
         partialUpdatedProductLine.setId(productLine.getId());
 
-        partialUpdatedProductLine.name(UPDATED_NAME).notes(UPDATED_NOTES).creaDate(UPDATED_CREA_DATE);
+        partialUpdatedProductLine.name(UPDATED_NAME).updateDate(UPDATED_UPDATE_DATE);
 
         restProductLineMockMvc
             .perform(

@@ -116,8 +116,10 @@ describe('Service Tests', () => {
 
       it('should partial update a FeatureDeployement', async () => {
         const patchObject = {
-          customisationDescription: 'BBBBBB',
+          code: 'BBBBBB',
+          creaDate: dayjs(currentDate).format(DATE_FORMAT),
           updateDate: dayjs(currentDate).format(DATE_FORMAT),
+          notes: 'BBBBBB',
           ...new FeatureDeployement(),
         };
         const returnedFromService = Object.assign(patchObject, elemDefault);

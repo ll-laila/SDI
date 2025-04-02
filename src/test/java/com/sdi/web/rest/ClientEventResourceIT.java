@@ -339,7 +339,7 @@ class ClientEventResourceIT {
         ClientEvent partialUpdatedClientEvent = new ClientEvent();
         partialUpdatedClientEvent.setId(clientEvent.getId());
 
-        partialUpdatedClientEvent.event(UPDATED_EVENT).updateDate(UPDATED_UPDATE_DATE).notes(UPDATED_NOTES);
+        partialUpdatedClientEvent.updateDate(UPDATED_UPDATE_DATE).notes(UPDATED_NOTES);
 
         restClientEventMockMvc
             .perform(

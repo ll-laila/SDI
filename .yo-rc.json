@@ -38,13 +38,14 @@
       "HOST",
       "OS",
       "HSM",
-      "ApplicationServer"
+      "ApplicationServer",
+      "ActionRequest"
     ],
     "feignClient": null,
     "jhipsterVersion": "8.9.0",
     "jwtSecretKey": "OWExNzEzNWIxZDg2ZDI5ZjI5NmQyZDZlODAyNDUwMGFhMzU0MzFiZmEwMGRjYzViNjhkMmMyNmNlYTM2MjRhNjFhODM0NzJjZmNmYjlkY2ZiMzc3YTI4NzkwMGQyNzEzOTFhOGIxNjZhNWJjYTBiMDkxM2VmYWQyZTgwMjc0OTY=",
     "languages": ["en", "fr"],
-    "lastLiquibaseTimestamp": 1742557914000,
+    "lastLiquibaseTimestamp": 1743537057000,
     "microfrontend": null,
     "microfrontends": [],
     "monorepository": true,

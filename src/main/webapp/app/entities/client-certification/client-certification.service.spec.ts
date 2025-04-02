@@ -117,7 +117,12 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a ClientCertification', async () => {
-        const patchObject = { certification: 'BBBBBB', updateDate: dayjs(currentDate).format(DATE_FORMAT), ...new ClientCertification() };
+        const patchObject = {
+          certificationDate: dayjs(currentDate).format(DATE_FORMAT),
+          creaDate: dayjs(currentDate).format(DATE_FORMAT),
+          notes: 'BBBBBB',
+          ...new ClientCertification(),
+        };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { certificationDate: currentDate, creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

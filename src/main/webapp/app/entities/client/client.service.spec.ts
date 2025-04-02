@@ -140,11 +140,12 @@ describe('Service Tests', () => {
       it('should partial update a Client', async () => {
         const patchObject = {
           clientLogo: 'BBBBBB',
-          mainContactName: 'BBBBBB',
-          mainContactEmail: 'BBBBBB',
+          code: 'BBBBBB',
           currentBruncheNumber: 1,
-          creaDate: dayjs(currentDate).format(DATE_FORMAT),
-          updateDate: dayjs(currentDate).format(DATE_FORMAT),
+          currentCustomersNumber: 1,
+          mainContactPhoneNumber: 'BBBBBB',
+          url: 'BBBBBB',
+          notes: 'BBBBBB',
           ...new Client(),
         };
         const returnedFromService = Object.assign(patchObject, elemDefault);

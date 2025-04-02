@@ -114,7 +114,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a CustomisationLevel', async () => {
-        const patchObject = { updateDate: dayjs(currentDate).format(DATE_FORMAT), ...new CustomisationLevel() };
+        const patchObject = { level: 'BBBBBB', notes: 'BBBBBB', ...new CustomisationLevel() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

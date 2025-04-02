@@ -91,6 +91,7 @@ public class CacheConfiguration {
             createCache(cm, com.sdi.domain.HSM.class.getName() + ".productDeployements");
             createCache(cm, com.sdi.domain.ApplicationServer.class.getName());
             createCache(cm, com.sdi.domain.ApplicationServer.class.getName() + ".productDeployements");
+            createCache(cm, com.sdi.domain.ActionRequest.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

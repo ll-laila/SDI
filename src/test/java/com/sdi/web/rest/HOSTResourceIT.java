@@ -287,8 +287,6 @@ class HOSTResourceIT {
         HOST partialUpdatedHOST = new HOST();
         partialUpdatedHOST.setId(hOST.getId());
 
-        partialUpdatedHOST.creaDate(UPDATED_CREA_DATE).updateDate(UPDATED_UPDATE_DATE).notes(UPDATED_NOTES);
-
         restHOSTMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, partialUpdatedHOST.getId())

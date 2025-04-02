@@ -367,7 +367,7 @@ class CountryResourceIT {
         Country partialUpdatedCountry = new Country();
         partialUpdatedCountry.setId(country.getId());
 
-        partialUpdatedCountry.updateDate(UPDATED_UPDATE_DATE);
+        partialUpdatedCountry.countryname(UPDATED_COUNTRYNAME).creaDate(UPDATED_CREA_DATE);
 
         restCountryMockMvc
             .perform(

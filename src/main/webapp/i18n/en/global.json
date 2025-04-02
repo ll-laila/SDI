@@ -32,7 +32,8 @@
         "host": "HOST",
         "os": "OS",
         "hsm": "HSM",
-        "applicationServer": "Application Server"
+        "applicationServer": "Application Server",
+        "actionRequest": "Action Request"
       },
       "account": {
         "main": "Account",

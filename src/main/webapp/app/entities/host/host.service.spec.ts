@@ -114,7 +114,12 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a HOST', async () => {
-        const patchObject = { name: 'BBBBBB', creaDate: dayjs(currentDate).format(DATE_FORMAT), ...new HOST() };
+        const patchObject = {
+          creaDate: dayjs(currentDate).format(DATE_FORMAT),
+          updateDate: dayjs(currentDate).format(DATE_FORMAT),
+          notes: 'BBBBBB',
+          ...new HOST(),
+        };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

@@ -115,12 +115,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a ClientEventType', async () => {
-        const patchObject = {
-          type: 'BBBBBB',
-          creaDate: dayjs(currentDate).format(DATE_FORMAT),
-          updateDate: dayjs(currentDate).format(DATE_FORMAT),
-          ...new ClientEventType(),
-        };
+        const patchObject = { description: 'BBBBBB', ...new ClientEventType() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

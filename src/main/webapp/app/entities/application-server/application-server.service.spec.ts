@@ -114,7 +114,12 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a ApplicationServer', async () => {
-        const patchObject = { updateDate: dayjs(currentDate).format(DATE_FORMAT), ...new ApplicationServer() };
+        const patchObject = {
+          name: 'BBBBBB',
+          updateDate: dayjs(currentDate).format(DATE_FORMAT),
+          notes: 'BBBBBB',
+          ...new ApplicationServer(),
+        };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

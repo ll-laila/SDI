@@ -117,7 +117,12 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a Feature', async () => {
-        const patchObject = { description: 'BBBBBB', notes: 'BBBBBB', ...new Feature() };
+        const patchObject = {
+          description: 'BBBBBB',
+          creaDate: dayjs(currentDate).format(DATE_FORMAT),
+          updateDate: dayjs(currentDate).format(DATE_FORMAT),
+          ...new Feature(),
+        };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

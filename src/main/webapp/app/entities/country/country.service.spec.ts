@@ -119,9 +119,9 @@ describe('Service Tests', () => {
       it('should partial update a Country', async () => {
         const patchObject = {
           countryname: 'BBBBBB',
-          countryFlagcode: 'BBBBBB',
-          notes: 'BBBBBB',
+          countryFlag: 'BBBBBB',
           creaDate: dayjs(currentDate).format(DATE_FORMAT),
+          updateDate: dayjs(currentDate).format(DATE_FORMAT),
           ...new Country(),
         };
         const returnedFromService = Object.assign(patchObject, elemDefault);

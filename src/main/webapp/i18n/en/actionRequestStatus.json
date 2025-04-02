@@ -1,0 +1,10 @@
+{
+  "sdiApp": {
+    "ActionRequestStatus": {
+      "null": "",
+      "PENDING": "PENDING",
+      "APPROVED": "APPROVED",
+      "REJECTED": "REJECTED"
+    }
+  }
+}

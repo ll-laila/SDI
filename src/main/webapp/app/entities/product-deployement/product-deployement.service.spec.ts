@@ -135,7 +135,9 @@ describe('Service Tests', () => {
       it('should partial update a ProductDeployement', async () => {
         const patchObject = {
           code: 'BBBBBB',
-          endDeployementDate: dayjs(currentDate).format(DATE_FORMAT),
+          refContract: 'BBBBBB',
+          creaDate: dayjs(currentDate).format(DATE_FORMAT),
+          updateDate: dayjs(currentDate).format(DATE_FORMAT),
           notes: 'BBBBBB',
           ...new ProductDeployement(),
         };

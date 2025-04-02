@@ -114,7 +114,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a HSM', async () => {
-        const patchObject = { name: 'BBBBBB', ...new HSM() };
+        const patchObject = { updateDate: dayjs(currentDate).format(DATE_FORMAT), notes: 'BBBBBB', ...new HSM() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

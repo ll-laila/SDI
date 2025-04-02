@@ -115,7 +115,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a Region', async () => {
-        const patchObject = { name: 'BBBBBB', code: 'BBBBBB', ...new Region() };
+        const patchObject = { name: 'BBBBBB', creaDate: dayjs(currentDate).format(DATE_FORMAT), ...new Region() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

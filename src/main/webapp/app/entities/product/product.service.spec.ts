@@ -118,6 +118,7 @@ describe('Service Tests', () => {
       it('should partial update a Product', async () => {
         const patchObject = {
           name: 'BBBBBB',
+          code: 'BBBBBB',
           logo: 'BBBBBB',
           notes: 'BBBBBB',
           updateDate: dayjs(currentDate).format(DATE_FORMAT),

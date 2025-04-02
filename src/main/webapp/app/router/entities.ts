@@ -101,6 +101,10 @@ const ApplicationServer = () => import('@/entities/application-server/applicatio
 const ApplicationServerUpdate = () => import('@/entities/application-server/application-server-update.vue');
 const ApplicationServerDetails = () => import('@/entities/application-server/application-server-details.vue');
 
+const ActionRequest = () => import('@/entities/action-request/action-request.vue');
+const ActionRequestUpdate = () => import('@/entities/action-request/action-request-update.vue');
+const ActionRequestDetails = () => import('@/entities/action-request/action-request-details.vue');
+
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 export default {
@@ -705,6 +709,30 @@ export default {
       path: 'application-server/:applicationServerId/view',
       name: 'ApplicationServerView',
       component: ApplicationServerDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'action-request',
+      name: 'ActionRequest',
+      component: ActionRequest,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'action-request/new',
+      name: 'ActionRequestCreate',
+      component: ActionRequestUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'action-request/:actionRequestId/edit',
+      name: 'ActionRequestEdit',
+      component: ActionRequestUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'action-request/:actionRequestId/view',
+      name: 'ActionRequestView',
+      component: ActionRequestDetails,
       meta: { authorities: [Authority.USER] },
     },
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here

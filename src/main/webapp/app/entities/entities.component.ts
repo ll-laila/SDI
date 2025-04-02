@@ -25,6 +25,7 @@ import HOSTService from './host/host.service';
 import OSService from './os/os.service';
 import HSMService from './hsm/hsm.service';
 import ApplicationServerService from './application-server/application-server.service';
+import ActionRequestService from './action-request/action-request.service';
 import UserService from '@/entities/user/user.service';
 // jhipster-needle-add-entity-service-to-entities-component-import - JHipster will import entities services here
 
@@ -58,6 +59,7 @@ export default defineComponent({
     provide('oSService', () => new OSService());
     provide('hSMService', () => new HSMService());
     provide('applicationServerService', () => new ApplicationServerService());
+    provide('actionRequestService', () => new ActionRequestService());
     // jhipster-needle-add-entity-service-to-entities-component - JHipster will import entities services here
   },
 });

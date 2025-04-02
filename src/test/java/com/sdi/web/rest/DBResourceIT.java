@@ -285,7 +285,7 @@ class DBResourceIT {
         DB partialUpdatedDB = new DB();
         partialUpdatedDB.setId(dB.getId());
 
-        partialUpdatedDB.updateDate(UPDATED_UPDATE_DATE).notes(UPDATED_NOTES);
+        partialUpdatedDB.name(UPDATED_NAME).creaDate(UPDATED_CREA_DATE).notes(UPDATED_NOTES);
 
         restDBMockMvc
             .perform(

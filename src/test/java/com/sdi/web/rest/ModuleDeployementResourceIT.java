@@ -315,10 +315,7 @@ class ModuleDeployementResourceIT {
         ModuleDeployement partialUpdatedModuleDeployement = new ModuleDeployement();
         partialUpdatedModuleDeployement.setId(moduleDeployement.getId());
 
-        partialUpdatedModuleDeployement
-            .customisationDescription(UPDATED_CUSTOMISATION_DESCRIPTION)
-            .creaDate(UPDATED_CREA_DATE)
-            .updateDate(UPDATED_UPDATE_DATE);
+        partialUpdatedModuleDeployement.creaDate(UPDATED_CREA_DATE).notes(UPDATED_NOTES);
 
         restModuleDeployementMockMvc
             .perform(

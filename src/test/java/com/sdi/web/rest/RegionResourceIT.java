@@ -307,7 +307,7 @@ class RegionResourceIT {
         Region partialUpdatedRegion = new Region();
         partialUpdatedRegion.setId(region.getId());
 
-        partialUpdatedRegion.name(UPDATED_NAME).code(UPDATED_CODE).updateDate(UPDATED_UPDATE_DATE);
+        partialUpdatedRegion.code(UPDATED_CODE).creaDate(UPDATED_CREA_DATE).updateDate(UPDATED_UPDATE_DATE);
 
         restRegionMockMvc
             .perform(

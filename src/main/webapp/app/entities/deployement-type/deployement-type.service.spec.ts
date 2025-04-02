@@ -114,12 +114,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a DeployementType', async () => {
-        const patchObject = {
-          creaDate: dayjs(currentDate).format(DATE_FORMAT),
-          updateDate: dayjs(currentDate).format(DATE_FORMAT),
-          notes: 'BBBBBB',
-          ...new DeployementType(),
-        };
+        const patchObject = { type: 'BBBBBB', notes: 'BBBBBB', ...new DeployementType() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

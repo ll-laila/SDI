@@ -114,7 +114,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a ProductLine', async () => {
-        const patchObject = { name: 'BBBBBB', notes: 'BBBBBB', updateDate: dayjs(currentDate).format(DATE_FORMAT), ...new ProductLine() };
+        const patchObject = { notes: 'BBBBBB', updateDate: dayjs(currentDate).format(DATE_FORMAT), ...new ProductLine() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

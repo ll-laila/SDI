@@ -120,6 +120,7 @@ describe('Service Tests', () => {
           description: 'BBBBBB',
           creaDate: dayjs(currentDate).format(DATE_FORMAT),
           updateDate: dayjs(currentDate).format(DATE_FORMAT),
+          notes: 'BBBBBB',
           ...new ClientType(),
         };
         const returnedFromService = Object.assign(patchObject, elemDefault);

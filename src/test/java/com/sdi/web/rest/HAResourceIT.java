@@ -285,7 +285,7 @@ class HAResourceIT {
         HA partialUpdatedHA = new HA();
         partialUpdatedHA.setId(hA.getId());
 
-        partialUpdatedHA.notes(UPDATED_NOTES);
+        partialUpdatedHA.creaDate(UPDATED_CREA_DATE).notes(UPDATED_NOTES);
 
         restHAMockMvc
             .perform(

@@ -319,7 +319,7 @@ class CertificationResourceIT {
         Certification partialUpdatedCertification = new Certification();
         partialUpdatedCertification.setId(certification.getId());
 
-        partialUpdatedCertification.expireDate(UPDATED_EXPIRE_DATE);
+        partialUpdatedCertification.name(UPDATED_NAME).creaDate(UPDATED_CREA_DATE).updateDate(UPDATED_UPDATE_DATE).notes(UPDATED_NOTES);
 
         restCertificationMockMvc
             .perform(

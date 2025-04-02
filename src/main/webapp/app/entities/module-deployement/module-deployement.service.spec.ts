@@ -114,7 +114,7 @@ describe('Service Tests', () => {
       });
 
       it('should partial update a ModuleDeployement', async () => {
-        const patchObject = { updateDate: dayjs(currentDate).format(DATE_FORMAT), ...new ModuleDeployement() };
+        const patchObject = { customisationDescription: 'BBBBBB', ...new ModuleDeployement() };
         const returnedFromService = Object.assign(patchObject, elemDefault);
 
         const expected = { creaDate: currentDate, updateDate: currentDate, ...returnedFromService };

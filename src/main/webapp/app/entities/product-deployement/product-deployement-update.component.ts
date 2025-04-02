@@ -26,12 +26,18 @@ import { type IApplicationServer } from '@/shared/model/application-server.model
 import OSService from '@/entities/os/os.service';
 import { type IOS } from '@/shared/model/os.model';
 import { type IProductDeployement, ProductDeployement } from '@/shared/model/product-deployement.model';
+import ActionRequestService from '../action-request/action-request.service.ts';
+import { ActionRequest, type IActionRequest } from '@/shared/model/action-request.model';
+import { ActionRequestStatus } from '@/shared/model/enumerations/action-request-status.model';
 
 export default defineComponent({
   compatConfig: { MODE: 3 },
   name: 'ProductDeployementUpdate',
   setup() {
     const productDeployementService = inject('productDeployementService', () => new ProductDeployementService());
+    const actionRequestService = inject('actionRequestService', () => new ActionRequestService());
+    const actionRequest: Ref<IActionRequest> = ref(new ActionRequest());
+
     const alertService = inject('alertService', () => useAlertService(), true);
 
     const productDeployement: Ref<IProductDeployement> = ref(new ProductDeployement());
@@ -168,6 +174,8 @@ export default defineComponent({
 
     return {
       productDeployementService,
+      actionRequestService,
+      actionRequest,
       alertService,
       productDeployement,
       previousState,
@@ -203,17 +211,33 @@ export default defineComponent({
             this.alertService.showHttpError(error.response);
           });
       } else {
-        this.productDeployementService()
-          .create(this.productDeployement)
+        const newDataJson = JSON.stringify(this.productDeployement);
+
+        this.actionRequest = new ActionRequest(undefined, 'ProductDeployement', newDataJson, 'PENDING', 'manager', null, new Date(), null);
+
+        this.actionRequestService()
+          .create(this.actionRequest)
           .then(param => {
             this.isSaving = false;
             this.previousState();
-            this.alertService.showSuccess(this.t$('sdiApp.productDeployement.created', { param: param.id }).toString());
+            this.alertService.showSuccess(this.t$('sdiApp.actionRequest.created', { param: param.id }).toString());
           })
           .catch(error => {
             this.isSaving = false;
             this.alertService.showHttpError(error.response);
           });
+
+        // this.productDeployementService()
+        //   .create(this.productDeployement)
+        //   .then(param => {
+        //     this.isSaving = false;
+        //     this.previousState();
+        //     this.alertService.showSuccess(this.t$('sdiApp.productDeployement.created', { param: param.id }).toString());
+        //   })
+        //   .catch(error => {
+        //     this.isSaving = false;
+        //     this.alertService.showHttpError(error.response);
+        //   });
       }
     },
   },
